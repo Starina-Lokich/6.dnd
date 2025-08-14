@@ -1,0 +1,1 @@
+[![Deploy to GitHub Pages](https://github.com/Kotlyci/dnd/actions/workflows/deploy.yml/badge.svg)](https://github.com/Starina-Lokich/6.dnd/actions/workflows/deploy.yml)
