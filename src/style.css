@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f5f7;
+  margin: 0;
+  padding: 0;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.column {
+  background: #ebecf0;
+  border-radius: 6px;
+  padding: 16px;
+  width: 300px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.cards {
+  flex: 1;
+  min-height: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 12px 36px 12px 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  position: relative;
+  cursor: grab;
+  transition: box-shadow 0.2s;
+  user-select: none;
+  overflow-wrap: break-word;
+}
+
+.card.dragging {
+  opacity: 0.5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.cards.dragover {
+  background: #d2e4fc;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
+/* Крестик удаления */
+.card .delete-btn {
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: #888;
+  font-size: 18px;
+  background: none;
+  border: none;
+  outline: none;
+  z-index: 2;
+}
+.card:hover .delete-btn {
+  opacity: 1;
+}
+.delete-btn:hover {
+  color: #e74c3c;
+}
+
+.card.placeholder {
+  background: #e0e0e0;
+  border: 2px dashed #aaa;
+  margin-bottom: 12px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  padding: 12px 36px 12px 12px;
+}
+.add-card-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.add-card-form input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-card-form button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background: #5aac44;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-card-form button:hover {
+  background: #519839;
+}
+
+.add-btn {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #5aac44;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: left;
+  padding: 0;
+}
+
+.add-btn:hover {
+  text-decoration: underline;
+}
